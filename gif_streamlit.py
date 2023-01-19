@@ -25,7 +25,7 @@ st.title('GIF Creator')
 
 # File upload
 st.sidebar.header('Upload your file')
-uploaded_file = st.sidebar.file_uploader("Choose a file", type= ['avi','wmv','mov','mp4','mkv']
+uploaded_file = st.sidebar.file_uploader("Choose a file", type= ['avi','wmv','mov','mp4','mkv'])
 
 
 # Display GIF parameters once the file is loaded
