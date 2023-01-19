@@ -37,7 +37,7 @@ if uploaded_file is not None:
 
 	#Using the above temporary file
 	clip = VideFileClip(tfile.name)
-
+	
 	st.session_state.clip_duration = clip.duration
 
 	#Sidebar widgets
