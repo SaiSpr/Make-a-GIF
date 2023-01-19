@@ -1,5 +1,6 @@
 import os
 import base64
+import tempfile
 import numpy as np
 import streamlit as st
 import moviepy.video.fx.all as vfx
