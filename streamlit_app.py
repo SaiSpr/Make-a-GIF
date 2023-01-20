@@ -18,8 +18,11 @@ if 'clip_fps' not in st.session_state:
     st.session_state.clip_fps = 0
 if 'clip_total_frames' not in st.session_state:
     st.session_state.clip_total_frames = 0  
-    
-st.title('🎈 Animated GIF Maker')
+
+# App title
+![](https://meritt-gifs.s3-us-west-1.amazonaws.com/reaction/aaw-yeah.gif)
+
+st.title('Party Popper Make A GIF')
 
 ## Upload file ##
 st.sidebar.header('Upload file')
