@@ -132,7 +132,4 @@ if uploaded_file is not None:
 else:
   st.warning('👈 Upload a video file')
 
-st.markdown(''' 
-**Credits**
-- Chanin Nantasenamat
-''')
+
