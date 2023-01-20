@@ -24,11 +24,11 @@ st.title('🎈 Animated GIF Maker')
 ## Upload file ##
 st.sidebar.header('Upload file')
 uploaded_file = st.sidebar.file_uploader("Choose a file", type=['mov', 'mp4'])
-st.sidebar.markdown('''
-[Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
----
-Made with ❤️ by Chanin Nantasenamat ([Data Professor](https://youtube.com/dataprofessor))
-''')
+# st.sidebar.markdown('''
+# [Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
+# ---
+# Made with ❤️ by Chanin Nantasenamat ([Data Professor](https://youtube.com/dataprofessor))
+# ''')
 
 ## Display gif generation parameters once file has been uploaded ##
 if uploaded_file is not None:
@@ -103,14 +103,12 @@ if uploaded_file is not None:
 
     image_list[0].save('export.gif', format = 'GIF', save_all = True, loop = 0, append_images = image_list)
     
-    #clip.write_gif('export.gif', fps=st.session_state.clip_fps)
+
     
     ## Download ##
     st.subheader('Download')
     
-    #video_file = open('export.gif', 'rb')
-    #video_bytes = video_file.read()
-    #st.video(video_bytes)
+
     
     file_ = open('export.gif', 'rb')
     contents = file_.read()
