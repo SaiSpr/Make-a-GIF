@@ -130,6 +130,6 @@ if uploaded_file is not None:
 
 ## Default page ##
 else:
-  st.warning('👈 Upload a video file')
+  st.warning('👈 Upload your video file')
 
 
