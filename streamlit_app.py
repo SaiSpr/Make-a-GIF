@@ -20,7 +20,7 @@ if 'clip_total_frames' not in st.session_state:
     st.session_state.clip_total_frames = 0  
 
 # App title
-st.title('🎉 Make A GIF')
+st.title('🤹 Make A GIF 🏄‍♂️')
 
 ## Upload file ##
 st.sidebar.header('Upload file')
