@@ -20,20 +20,16 @@ if 'clip_total_frames' not in st.session_state:
     st.session_state.clip_total_frames = 0  
 
 # App title
-st.title('Party Popper Make A GIF')
+st.title('🎉 Make A GIF')
 
 ## Upload file ##
 st.sidebar.header('Upload file')
 uploaded_file = st.sidebar.file_uploader("Choose a file", type=['mov', 'mp4'])
-# st.sidebar.markdown('''
-# [Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
-# ---
-# Made with ❤️ by Chanin Nantasenamat ([Data Professor](https://youtube.com/dataprofessor))
-# ''')
 
-## Display gif generation parameters once file has been uploaded ##
+
+# Display GIF parameters once the file is loaded
 if uploaded_file is not None:
-  ## Save to temp file ##
+  # Saving to temporary file
   tfile = tempfile.NamedTemporaryFile(delete=False) 
   tfile.write(uploaded_file.read())
   
@@ -42,13 +38,13 @@ if uploaded_file is not None:
     
   st.session_state.clip_duration = clip.duration
   
-  ## Input widgets ##
+  # Sidebar widgets
   st.sidebar.header('Input parameters')
-  selected_resolution_scaling = st.sidebar.slider('Scaling of video resolution', 0.0, 1.0, 0.5 )
-  selected_speedx = st.sidebar.slider('Playback speed', 0.1, 10.0, 5.0)
-  selected_export_range = st.sidebar.slider('Duration range to export', 0, int(st.session_state.clip_duration), (0, int(st.session_state.clip_duration) ))
+  selected_resolution_scaling = st.sidebar.slider('Scaling of video resolution', 0.0, 2.0, 0.5 )
+  selected_speedx = st.sidebar.slider('Playback speed', 0.1, 10.0, 2.0)
+  selected_export_range = st.sidebar.slider('Duration range to export in seconds', 0, int(st.session_state.clip_duration), (0, int(st.session_state.clip_duration) ))
     
-  ## Resizing of video ##
+  ## Resizing of video
   clip = clip.resize(selected_resolution_scaling)
      
   st.session_state.clip_width = clip.w
@@ -57,7 +53,7 @@ if uploaded_file is not None:
   st.session_state.clip_total_frames = clip.duration * clip.fps
   st.session_state.clip_fps = st.sidebar.slider('FPS', 10, 60, 20)
     
-  ## Display output ##
+  ## Display output
   st.subheader('Metrics')
   col1, col2, col3, col4, col5 = st.columns(5)
   col1.metric('Width', st.session_state.clip_width, 'pixels')
@@ -135,3 +131,8 @@ if uploaded_file is not None:
 ## Default page ##
 else:
   st.warning('👈 Upload a video file')
+
+st.markdown(''' 
+**Credits**
+- Chanin Nantasenamat
+''')
