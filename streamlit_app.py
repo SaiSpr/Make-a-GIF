@@ -20,8 +20,6 @@ if 'clip_total_frames' not in st.session_state:
     st.session_state.clip_total_frames = 0  
 
 # App title
-![](https://meritt-gifs.s3-us-west-1.amazonaws.com/reaction/aaw-yeah.gif)
-
 st.title('Party Popper Make A GIF')
 
 ## Upload file ##
