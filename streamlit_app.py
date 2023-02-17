@@ -24,7 +24,7 @@ st.title('🤹 Make A GIF 🏄‍♂️')
 
 ## Upload file ##
 st.sidebar.header('Upload file')
-uploaded_file = st.sidebar.file_uploader("Choose a file", type=['avi','wmv','mov','mp4','mkv'])
+uploaded_file = st.sidebar.file_uploader("Choose a file", type=['avi','wmv','mov','mp4','mkv','webm'])
 
 
 # Display GIF parameters once the file is loaded
